@@ -1,0 +1,42 @@
+<resources>
+    <string name="app_name">licenta</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <!--ERRORS-->
+    <string name="error_network">A aparut o eroare legată de conexiunea la internet. Încearca mai târziu.</string>
+
+    <string name="restaurant_availability">%1$d/%2$d locuri</string>
+
+    <string name="morning">Dimineața</string>
+    <string name="afternoon">După-amiaza</string>
+    <string name="evening">Seara</string>
+
+    <string-array name="Score">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+    </string-array>
+
+    <string-array name="morning_intervals">
+        <item>08:00 – 09:00</item>
+        <item>09:00 – 10:00</item>
+        <item>10:00 – 11:00</item>
+        <item>11:00 – 12:00</item>
+    </string-array>
+
+    <string-array name="afternoon_intervals">
+        <item>12:00 – 13:30</item>
+        <item>13:30 – 15:00</item>
+        <item>15:00 – 16:30</item>
+        <item>16:30 – 18:00</item>
+    </string-array>
+
+    <string-array name="evening_intervals">
+        <item>18:00 – 19:00</item>
+        <item>19:00 – 20:00</item>
+        <item>20:00 – 21:00</item>
+        <item>21:00 – 22:00</item>
+    </string-array>
+</resources>

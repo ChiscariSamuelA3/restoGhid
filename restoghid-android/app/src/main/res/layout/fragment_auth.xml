@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="viewModel"
+            type="com.example.licenta.ui.auth.onboarding.AuthViewModel" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#31516A"
+        android:gravity="top|center"
+        android:orientation="vertical"
+        tools:context=".ui.auth.onboarding.AuthFragment">
+
+        <Button
+            android:id="@+id/btn_skip"
+            style="@style/AppTheme.Widget.MaterialComponents.Secondary"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top|end"
+            android:layout_margin="24dp"
+            android:background="@drawable/button_skip"
+            android:fontFamily="@font/poppins_medium"
+            android:padding="10dp"
+            android:text="SKIP"
+            android:textSize="14sp" />
+
+        <ImageView
+            android:id="@+id/iv_resto_ghid"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_resto_ghid" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins_bold"
+            android:text="Accesează-ți contul"
+            android:textColor="#5E90F4"
+            android:textSize="24sp" />
+
+        <Button
+            android:id="@+id/btn_signup"
+            style="@style/AppTheme.Widget.MaterialComponents.Primary"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:layout_marginTop="27dp"
+            android:text="Sign up" />
+
+        <Button
+            android:id="@+id/btn_login"
+            style="@style/AppTheme.Widget.MaterialComponents.Secondary"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="27dp"
+            android:layout_marginEnd="24dp"
+            android:background="@drawable/button_custom_primary"
+            android:fontFamily="@font/poppins_bold"
+            android:text="Log in"
+            android:textAllCaps="false"
+            android:textColor="@color/text_secondary" />
+
+    </LinearLayout>
+</layout>

@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="viewModel"
+            type="com.example.licenta.ui.managerial.ManagerialViewModel" />
+    </data>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        tools:context=".ui.managerial.ManagerialFragment">
+
+        <LinearLayout
+            android:id="@+id/fragment_filters"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#31516A"
+            android:gravity="center|top"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:layout_marginHorizontal="20dp"
+                android:layout_marginTop="15dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppins_semi_bold"
+                    android:text="Logout"
+                    android:textColor="@color/text_secondary" />
+
+                <ImageButton
+                    android:id="@+id/ib_user_logout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:background="@null"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/ic_logout" />
+
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/iv_resto_ghid"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:src="@drawable/ic_resto_ghid" />
+
+            <TextView
+                style="@style/AppTheme.Widget.MaterialComponents.Primary"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="15dp"
+                android:text="Alege ce dorești să gestionezi:"
+                android:textColor="@color/text_secondary"
+                android:textSize="20sp" />
+
+            <Button
+                android:id="@+id/btn_manage_info"
+                style="@style/AppTheme.Widget.MaterialComponents.Secondary"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="12dp"
+                android:background="@drawable/button_custom_primary"
+                android:fontFamily="@font/poppins_bold"
+                android:text="Informații"
+                android:textAllCaps="false"
+                android:textColor="@color/text_secondary" />
+
+            <Button
+                android:id="@+id/btn_manage_bookings"
+                style="@style/AppTheme.Widget.MaterialComponents.Secondary"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="12dp"
+                android:background="@drawable/button_custom_primary"
+                android:fontFamily="@font/poppins_bold"
+                android:text="Rezervări"
+                android:textAllCaps="false"
+                android:textColor="@color/text_secondary" />
+
+            <Button
+                android:id="@+id/btn_manage_reviews"
+                style="@style/AppTheme.Widget.MaterialComponents.Secondary"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="12dp"
+                android:background="@drawable/button_custom_primary"
+                android:fontFamily="@font/poppins_bold"
+                android:text=" Recenzii "
+                android:textAllCaps="false"
+                android:textColor="@color/text_secondary" />
+
+        </LinearLayout>
+    </ScrollView>
+</layout>

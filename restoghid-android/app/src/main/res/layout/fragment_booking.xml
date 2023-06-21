@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="viewModel"
+            type="com.example.licenta.ui.booking.BookingViewModel" />
+    </data>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#31516A"
+        android:fillViewport="true"
+        android:padding="16dp"
+        tools:context=".ui.booking.BookingFragment">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tvBookingTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_semi_bold"
+                android:gravity="center"
+                android:text="Rezervări"
+                android:textColor="@color/text_secondary"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                tools:text="Rezervări" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginVertical="8dp"
+                android:background="#D3D3D3" />
+
+            <TextView
+                android:id="@+id/tvRestaurantName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_medium"
+                android:gravity="center"
+                android:text="@{viewModel.restaurantDetails.name}"
+                android:textColor="@color/text_secondary"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                tools:text="Nume Restaurant" />
+
+            <TextView
+                android:id="@+id/tvRestaurantAddress"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_regular"
+                android:gravity="center"
+                android:paddingTop="8dp"
+                android:text="@{viewModel.restaurantDetails.address}"
+                android:textColor="@color/text_secondary"
+                android:textSize="16sp"
+                tools:text="Adresa Restaurant" />
+
+            <DatePicker
+                android:id="@+id/datePicker"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp"
+                android:background="@color/text_secondary" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginVertical="8dp"
+                android:background="#D3D3D3" />
+
+            <EditText
+                android:id="@+id/etUserPhone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:hint="Număr de telefon"
+                android:inputType="phone"
+                android:textColor="@color/text_secondary"
+                android:textColorHint="@color/text_secondary"
+                android:textSize="13sp" />
+
+
+            <LinearLayout
+                android:id="@+id/availabilityCards"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <include
+                    android:id="@+id/availability_morning"
+                    layout="@layout/item_availability"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    app:availableSlots="@{viewModel.restaurantDetails.availableSlotsMorning}"
+                    app:period="@{@string/morning}"
+                    app:totalSlots="@{viewModel.restaurantDetails.totalSlots}" />
+
+                <include
+                    android:id="@+id/availability_afternoon"
+                    layout="@layout/item_availability"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    app:availableSlots="@{viewModel.restaurantDetails.availableSlotsAfternoon}"
+                    app:period="@{@string/afternoon}"
+                    app:totalSlots="@{viewModel.restaurantDetails.totalSlots}" />
+
+                <include
+                    android:id="@+id/availability_evening"
+                    layout="@layout/item_availability"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginBottom="10dp"
+                    app:availableSlots="@{viewModel.restaurantDetails.availableSlotsEvening}"
+                    app:period="@{@string/evening}"
+                    app:totalSlots="@{viewModel.restaurantDetails.totalSlots}" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+</layout>

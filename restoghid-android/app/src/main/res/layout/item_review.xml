@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:orientation="vertical"
+        android:padding="5dp">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/tv_review_username"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_bold"
+                android:text="Username"
+                android:textColor="@color/text_primary" />
+
+            <TextView
+                android:id="@+id/tv_review_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:fontFamily="@font/poppins_semi_bold"
+                android:text="Review date"
+                android:textColor="@color/text_primary" />
+
+        </FrameLayout>
+
+        <TextView
+            android:id="@+id/tv_review_content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins_semi_bold"
+            android:text="Review content"
+            android:textColor="@color/text_primary" />
+
+        <TextView
+            android:id="@+id/tv_review_score"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins_bold"
+            android:text="4.5"
+            android:textColor="@color/text_primary"
+            app:drawableEndCompat="@drawable/ic_rating" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cv_reply"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:layout_margin="1dp"
+            android:visibility="gone"
+            app:cardCornerRadius="16dp">
+
+            <TextView
+                android:id="@+id/tv_reply"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:padding="3dp"
+                android:text="Multumim pentru recenzie!"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                app:drawableStartCompat="@drawable/ic_reply" />
+        </androidx.cardview.widget.CardView>
+
+        <EditText
+            android:id="@+id/et_review_reply"
+            android:layout_width="wrap_content"
+            android:layout_height="52dp"
+            android:layout_gravity="start"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="10dp"
+            android:hint="Răspunde..."
+            android:inputType="textEmailAddress"
+            android:textSize="14sp"
+            android:visibility="gone"
+            app:backgroundTint="@null"
+            app:layout_constraintTop_toBottomOf="@id/tv_login_description" />
+
+        <Button
+            android:id="@+id/btn_review_reply"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_gravity="start"
+            android:backgroundTint="@color/teal_200"
+            android:text="Reply"
+            android:textAllCaps="false"
+            android:textColor="@color/text_primary"
+            android:textSize="13sp"
+            android:visibility="gone" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="#c0c0c0" />
+
+    </LinearLayout>
+</layout>
